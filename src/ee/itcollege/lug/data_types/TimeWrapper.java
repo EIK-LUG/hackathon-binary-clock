@@ -7,8 +7,8 @@ import ee.itcollege.lug.clock_mechanism.ClockMechanism;
  */
 public class TimeWrapper extends DisplayState {
 
-    public TimeWrapper(int[][] time){
-        super(time); //DisplatState()
+    public TimeWrapper(String time){
+        super(timeToRepresentation(time)); //DisplatState()
 
 
     }
@@ -21,23 +21,27 @@ public class TimeWrapper extends DisplayState {
              try {
                  anArray[j]=Integer.parseInt(""+time.charAt(i));
                  j++;
-
-
              }catch (NumberFormatException e){
 
              }
-
          }
-
-
-
-
         return anArray;
     }
 
-    private static int[][] timeToRepresentation(String time){
+    private static int[][] timeToRepresentation(String time) {
+        System.out.println(time);
+        int[][] matrix = new int[6][4];
+        int j=0;
+        for (int digit : strToIntARR(time)){
 
-    private int[] intToBinArr(int x) {
+            matrix[j]=intToBinArr(digit);
+            j++;
+        }
+
+
+        return matrix;
+    }
+    private static int[] intToBinArr(int x) {
         int[] repr = {0, 0, 0, 0};
         if (x >= 8) {
             repr[0] = 1;
@@ -55,10 +59,6 @@ public class TimeWrapper extends DisplayState {
         return repr;
     }
 
-
-
-       return null;
-    }
 
     public int[] getHourTens() {
         return getColumn(0);
@@ -85,5 +85,13 @@ public class TimeWrapper extends DisplayState {
         return getColumn(5);
     }
 
-
+    public String toString() {
+        for (int i=0;i<4;i++) {
+            System.out.println();
+            for(int j=0;j<6;j++){
+                System.out.print(repStorage[i][j]);
+            }
+        }
+        return "";
+    }
 }
