@@ -11,5 +11,9 @@ public class TimeWrapper extends DisplayState {
 
 
 
+
+    }
+    public int[] getHourTens() {
+        return getColumn(0);
     }
 }
