@@ -21,7 +21,7 @@ public class TimeWrapper extends DisplayState {
         return getColumn(1);
     }
 
-    public int[] getMinitesTens() {
+    public int[] getMinutesTens() {
         return getColumn(2);
     }
 
