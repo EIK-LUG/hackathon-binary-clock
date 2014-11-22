@@ -4,11 +4,14 @@ import java.util.Calendar;
 import java.util.Timer;
 
 import ee.itcollege.lug.clock_mechanism.ClockMechanism;
+import ee.itcollege.lug.display.Display;
+import ee.itcollege.lug.display.cli.CLIDisplay;
 
 public class Main {
 
     public static void main(String[] args) {
-        ClockMechanism test = new ClockMechanism();
+        Display clidisplay = new CLIDisplay();
+        ClockMechanism test = new ClockMechanism(clidisplay);
 
 
         while (true) {

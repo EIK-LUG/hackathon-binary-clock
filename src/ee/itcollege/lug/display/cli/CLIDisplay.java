@@ -10,7 +10,8 @@ import ee.itcollege.lug.display.Display;
 public class CLIDisplay  extends Display {
     @Override
     public void setTime(TimeWrapper time) {
-
+        int[] arr =  time.getSecondsOnes();
+        System.out.println(""+arr[0]+arr[1]+arr[2]+arr[3]);
     }
 
     @Override
