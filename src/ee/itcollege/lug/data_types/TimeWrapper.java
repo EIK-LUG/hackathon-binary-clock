@@ -13,6 +13,30 @@ public class TimeWrapper extends DisplayState {
 
     }
 
+
+    private static int[] strToIntARR(String time){
+        int[] anArray = new int[8];
+        int j = 0;
+        for (int i=0;i<time.length();i++) {
+             try {
+                 anArray[j]=Integer.parseInt(""+time.charAt(i));
+                 j++;
+
+
+             }catch (NumberFormatException e){
+
+             }
+
+         }
+
+
+
+
+        return anArray;
+    }
+
+    private static int[][] timeToRepresentation(String time){
+
     private int[] intToBinArr(int x) {
         int[] repr = {0, 0, 0, 0};
         if (x >= 8) {
@@ -31,7 +55,6 @@ public class TimeWrapper extends DisplayState {
         return repr;
     }
 
-    private int[][] timeToRepresentation(String time){
 
 
        return null;
