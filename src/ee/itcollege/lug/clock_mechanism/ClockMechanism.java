@@ -1,6 +1,8 @@
 package ee.itcollege.lug.clock_mechanism;
 
 
+import ee.itcollege.lug.data_types.TimeWrapper;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
@@ -18,5 +20,10 @@ public class ClockMechanism {
         SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
         return  sdf.format(cal.getTime());
 
+    }
+
+    public void tick() {
+        String currentTime = getTime();
+        TimeWrapper tw = new TimeWrapper(currentTime);
     }
 }
