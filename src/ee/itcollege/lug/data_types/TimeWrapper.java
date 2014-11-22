@@ -28,5 +28,5 @@ public class TimeWrapper extends DisplayState {
     public int[] getSecondsOnes() {
         return getColumn(5);
     }
-    
+
 }
