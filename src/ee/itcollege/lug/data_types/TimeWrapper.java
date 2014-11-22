@@ -13,8 +13,25 @@ public class TimeWrapper extends DisplayState {
 
     }
 
-    private int[][] timeToRepresentation(String time){
+    private int[] intToBinArr(int x) {
+        int[] repr = {0, 0, 0, 0};
+        if (x >= 8) {
+            repr[0] = 1;
+            x =- 8;
+        } else if (x >= 4) {
+            repr[0] = 1;
+            x =- 4;
+        } else if (x >= 2) {
+            repr[0] = 1;
+            x =- 2;
+        } else if (x >= 1) {
+            repr[0] = 1;
+            x =- 1;
+        }
+        return repr;
+    }
 
+    private int[][] timeToRepresentation(String time){
 
 
        return null;
