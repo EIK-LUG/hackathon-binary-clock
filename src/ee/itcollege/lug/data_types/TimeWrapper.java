@@ -15,21 +15,21 @@ public class TimeWrapper extends DisplayState {
 
 
     private static int[] strToIntARR(String time){
-        int[] anArray = new int[8];
+        int[] anArray = new int[6];
         int j = 0;
         for (int i=0;i<time.length();i++) {
              try {
                  anArray[j]=Integer.parseInt(""+time.charAt(i));
                  j++;
              }catch (NumberFormatException e){
-
              }
          }
+
+
         return anArray;
     }
 
     private static int[][] timeToRepresentation(String time) {
-        System.out.println(time);
         int[][] matrix = new int[6][4];
         int j=0;
         for (int digit : strToIntARR(time)){
@@ -45,16 +45,16 @@ public class TimeWrapper extends DisplayState {
         int[] repr = {0, 0, 0, 0};
         if (x >= 8) {
             repr[0] = 1;
-            x =- 8;
-        } else if (x >= 4) {
-            repr[0] = 1;
-            x =- 4;
-        } else if (x >= 2) {
-            repr[0] = 1;
-            x =- 2;
-        } else if (x >= 1) {
-            repr[0] = 1;
-            x =- 1;
+            x -= 8;
+        } if (x >= 4) {
+            repr[1] = 1;
+            x -= 4;
+        } if (x >= 2) {
+            repr[2] = 1;
+            x -= 2;
+        } if (x >= 1) {
+            repr[3] = 1;
+            x -= 1;
         }
         return repr;
     }
@@ -86,9 +86,9 @@ public class TimeWrapper extends DisplayState {
     }
 
     public String toString() {
-        for (int i=0;i<4;i++) {
+        for (int i=0;i<6;i++) {
             System.out.println();
-            for(int j=0;j<6;j++){
+            for(int j=0;j<4;j++){
                 System.out.print(repStorage[i][j]);
             }
         }
