@@ -9,13 +9,14 @@ import java.util.Calendar;
  */
 public class ClockMechanism {
 
-    private long getTime() {
+
+
+    private String getTime() {
 
         Calendar cal = Calendar.getInstance();
         cal.getTime();
         SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
-        System.out.println(sdf.format(cal.getTime()));
+        return  sdf.format(cal.getTime());
 
-        //TODO RETURN
     }
 }
