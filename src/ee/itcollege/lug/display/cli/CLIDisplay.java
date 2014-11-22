@@ -1,6 +1,7 @@
 package ee.itcollege.lug.display.cli;
 
 import ee.itcollege.lug.data_types.DisplayState;
+import ee.itcollege.lug.data_types.TimeWrapper;
 import ee.itcollege.lug.display.Display;
 
 /**

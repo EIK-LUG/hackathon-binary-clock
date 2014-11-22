@@ -7,12 +7,19 @@ import ee.itcollege.lug.clock_mechanism.ClockMechanism;
  */
 public class TimeWrapper extends DisplayState {
 
-    public TimeWrapper(String time){
-
-
+    public TimeWrapper(int[][] time){
+        super(time); //DisplatState()
 
 
     }
+
+    private int[][] timeToRepresentation(String time){
+
+
+
+       return null;
+    }
+
     public int[] getHourTens() {
         return getColumn(0);
     }
@@ -37,5 +44,6 @@ public class TimeWrapper extends DisplayState {
     public int[] getSecondsOnes() {
         return getColumn(5);
     }
+
 
 }

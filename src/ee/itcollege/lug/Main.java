@@ -7,7 +7,7 @@ public class Main {
 
     public static void main(String[] args) {
         ClockMechanism test = new ClockMechanism();
-
+        test.tick();
 
     }
 }

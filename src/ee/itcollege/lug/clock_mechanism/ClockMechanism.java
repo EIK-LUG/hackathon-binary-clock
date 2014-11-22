@@ -24,6 +24,7 @@ public class ClockMechanism {
 
     public void tick() {
         String currentTime = getTime();
+        System.out.print(currentTime.getClass());
         TimeWrapper tw = new TimeWrapper(currentTime);
     }
 }
