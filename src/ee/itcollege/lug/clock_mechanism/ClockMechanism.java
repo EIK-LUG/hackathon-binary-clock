@@ -18,15 +18,11 @@ public class ClockMechanism {
         this.display = display;
     }
 
-
-
     private String getTime() {
-
         Calendar cal = Calendar.getInstance();
         cal.getTime();
         SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
         return  sdf.format(cal.getTime());
-
     }
 
     public void tick() {

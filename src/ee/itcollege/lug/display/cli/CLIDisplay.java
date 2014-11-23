@@ -8,6 +8,7 @@ import ee.itcollege.lug.display.Display;
  * Created by jjoeleht on 22.11.14.
  */
 public class CLIDisplay  extends Display {
+    
     @Override
     public void setTime(TimeWrapper time) {
         int[] arr =  time.getSecondsOnes();

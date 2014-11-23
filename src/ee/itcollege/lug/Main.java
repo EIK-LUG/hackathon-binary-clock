@@ -1,7 +1,4 @@
 package ee.itcollege.lug;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Timer;
 
 import ee.itcollege.lug.clock_mechanism.ClockMechanism;
 import ee.itcollege.lug.display.Display;
@@ -13,7 +10,7 @@ public class Main {
         Display clidisplay = new CLIDisplay();
         ClockMechanism test = new ClockMechanism(clidisplay);
 
-
+        //Debug
         while (true) {
             try {
                 Thread.sleep(1000);

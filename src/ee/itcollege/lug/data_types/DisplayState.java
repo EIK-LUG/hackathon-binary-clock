@@ -14,8 +14,9 @@ public class DisplayState {
     public int[] getColumn(int columnNr) {
         return repStorage[columnNr];
     }
-   public void setState(int[][] representation) {
-       this.repStorage = representation;
-   }
+
+    public void setState(int[][] representation) {
+        this.repStorage = representation;
+    }
 
 }

@@ -7,7 +7,6 @@ import ee.itcollege.lug.display.Display;
  */
 public class GraphicalDisplay extends Display{
 
-
     @Override
     public void setTime(TimeWrapper time) {
 

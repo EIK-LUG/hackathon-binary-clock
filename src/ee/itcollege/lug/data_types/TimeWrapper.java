@@ -1,31 +1,25 @@
 package ee.itcollege.lug.data_types;
 
-import ee.itcollege.lug.clock_mechanism.ClockMechanism;
-
 /**
  * Created by chuck-norris on 22.11.14.
  */
 public class TimeWrapper extends DisplayState {
 
     public TimeWrapper(String time){
-        super(timeToRepresentation(time)); //DisplatState()
-
-
+        super(timeToRepresentation(time));
     }
-
 
     private static int[] strToIntARR(String time){
         int[] anArray = new int[6];
         int j = 0;
         for (int i=0;i<time.length();i++) {
-             try {
-                 anArray[j]=Integer.parseInt(""+time.charAt(i));
-                 j++;
-             }catch (NumberFormatException e){
-             }
-         }
-
-
+            try {
+                anArray[j]=Integer.parseInt(""+time.charAt(i));
+                j++;
+            }catch (NumberFormatException e){
+                /*Expected two ":" which are ignored.*/
+            }
+        }
         return anArray;
     }
 
@@ -37,10 +31,9 @@ public class TimeWrapper extends DisplayState {
             matrix[j]=intToBinArr(digit);
             j++;
         }
-
-
         return matrix;
     }
+
     private static int[] intToBinArr(int x) {
         int[] repr = {0, 0, 0, 0};
         if (x >= 8) {
@@ -59,7 +52,6 @@ public class TimeWrapper extends DisplayState {
         return repr;
     }
 
-
     public int[] getHourTens() {
         return getColumn(0);
     }
@@ -76,7 +68,6 @@ public class TimeWrapper extends DisplayState {
         return getColumn(3);
     }
 
-
     public int[] getSecondsTens() {
         return getColumn(4);
     }
@@ -85,6 +76,7 @@ public class TimeWrapper extends DisplayState {
         return getColumn(5);
     }
 
+    //Debug
     public String toString() {
         for (int i=0;i<6;i++) {
             System.out.println();
