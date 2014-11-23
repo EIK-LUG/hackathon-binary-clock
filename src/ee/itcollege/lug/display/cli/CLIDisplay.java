@@ -8,11 +8,26 @@ import ee.itcollege.lug.display.Display;
  * Created by jjoeleht on 22.11.14.
  */
 public class CLIDisplay  extends Display {
-    
+
     @Override
     public void setTime(TimeWrapper time) {
-        int[] arr =  time.getSecondsOnes();
-        System.out.println(""+arr[0]+arr[1]+arr[2]+arr[3]);
+        columnState(0, time.getHoursTens());
+        columnState(1, time.getHoursOnes());
+        columnState(2, time.getMinutesTens());
+        columnState(3, time.getMinutesOnes());
+        columnState(4, time.getSecondsTens());
+        columnState(5, time.getSecondsOnes());
+        printTime();
+    }
+
+    private void printTime() {
+        System.out.println();
+        for (int i=0;i<4;i++) {
+            for(int j=0;j<6;j++){
+                System.out.print(display[j][i]);
+            }
+            System.out.println();
+        }
     }
 
     @Override

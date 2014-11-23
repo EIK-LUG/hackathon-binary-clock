@@ -52,7 +52,7 @@ public class TimeWrapper extends DisplayState {
         return repr;
     }
 
-    public int[] getHourTens() {
+    public int[] getHoursTens() {
         return getColumn(0);
     }
 
